@@ -1,6 +1,9 @@
 This is a scrapy spider to get "Stock Connect Northbound/Southbound from HKEXNEWS 滬港通及深港通持股紀錄 http://www.hkexnews.hk/mutualmarketsdw/main.htm
 
 ## Usage
+
+After you download, please update the CHROMEDRIVER_PATH = '/home/user/chromedriver/chromedriver' in the settings.py. 
+and then you can start use
 * scrapy crawl hkexnews_scrapy (Get Today data)
 * scrapy crawl hkexnews_scrapy -o 123.json (will save the result to file 123.json)
 * scrapy crawl hkexnews_scrapy -a date=20180921 (Get the data from Date 21-Sep-2018, the format is YYYYmmdd)
