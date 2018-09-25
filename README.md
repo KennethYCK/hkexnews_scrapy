@@ -1,8 +1,7 @@
-This is a scrapy spider to get "Stock Connect Northbound/Southbound from HKEXNEWS [滬港通及深港通持股紀錄](http://www.hkexnews.hk/mutualmarketsdw/main.htm)
-
+This is a scrapy spider to get "Stock Connect Northbound/Southbound from HKEXNEWS [滬港通及深港通持股紀錄](http://www.hkexnews.hk/mutualmarketsdw/main.htm)  
 The code is CCASS code, you can reference [HKEX website](http://www.hkex.com.hk/mutual-market/stock-connect/eligible-stocks/view-all-eligible-securities?sc_lang=en) to to get stock code.
 
-這是一個用Scrapy + Selenium 的爬蟲, 從港交所拿每天滬港通及深港通的持股紀錄
+這是一個用Scrapy + Selenium 的爬蟲, 從港交所拿每天滬港通及深港通的持股紀錄  
 Code是CCASS 編號 不是股份編號，可在[港交所綱站](http://www.hkex.com.hk/mutual-market/stock-connect/eligible-stocks/view-all-eligible-securities?sc_lang=zh-hk)找到對應
 
 
@@ -27,11 +26,10 @@ Due to limation from hkexnews, it only allow you download latest one year data. 
 
 ## Database (Optional)
 
-Mongodb pipeline already implement you can uncomment below `#'hkexnews_scrapy.pipelines.MongoDBPipeline': 300,` in the `settings.py`
-
+Mongodb pipeline already implement you can uncomment below `#'hkexnews_scrapy.pipelines.MongoDBPipeline': 300,` in the `settings.py`  
 You can apply mlab or create your own mongo db instance to use.
 
-內置了 Mongodb pipeline模組，在`settings.py`裏 配置 `#'hkexnews_scrapy.pipelines.MongoDBPipeline': 300,`
+內置了 Mongodb pipeline模組，在`settings.py`裏配置 `'hkexnews_scrapy.pipelines.MongoDBPipeline': 300,`就可  
 你可在MLAB 申請一個免費的 mongodb 或者自己建立.
 
 ## Setting
