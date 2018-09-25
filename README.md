@@ -17,7 +17,8 @@ and then you can start use
 
 Due to limation from hkexnews, it only allow you download latest one year data. If you choose the day is not avaiable, the spider will handle as HTTP reponse 404. If the date is not trading day, also will reponse 404.
 
-因為港交所只可給你拿回一年的數據，如果日期錯誤，Spider 會自動當404 處理. 如果那天沒有交易，也會當404 處理.
+當你下載完，請在`seetings.py` 更新`CHROMEDRIVER_PATH`. 之後就能用
+因為港交所只可給你拿回一年內的數據，如果超出那日期，Spider 會自動當404 處理. 如果那天沒有交易，也會當404 處理.
 
 ## Requirement 
 * Scrapy
@@ -26,9 +27,12 @@ Due to limation from hkexnews, it only allow you download latest one year data. 
 
 ## Database (Optional)
 
-Mongo DB pipeline already implement you can uncomment below `#'hkexnews_scrapy.pipelines.MongoDBPipeline': 300,` in the settings.py
+Mongodb pipeline already implement you can uncomment below `#'hkexnews_scrapy.pipelines.MongoDBPipeline': 300,` in the `settings.py`
 
 You can apply mlab or create your own mongo db instance to use.
+
+內置了 Mongodb pipeline模組，在`settings.py`裏 配置 `#'hkexnews_scrapy.pipelines.MongoDBPipeline': 300,`
+你可在MLAB 申請一個免費的 mongodb 或者自己建立.
 
 ## Setting
 In the settings.py 
