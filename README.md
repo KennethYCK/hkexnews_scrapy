@@ -1,6 +1,11 @@
-This is a scrapy spider to get "Stock Connect Northbound/Southbound from HKEXNEWS 滬港通及深港通持股紀錄 http://www.hkexnews.hk/mutualmarketsdw/main.htm
+This is a scrapy spider to get "Stock Connect Northbound/Southbound from HKEXNEWS [滬港通及深港通持股紀錄](http://www.hkexnews.hk/mutualmarketsdw/main.htm)
 
-這是一個用Scrapy + Selenium 的爬蟲, 從港交所拿每天滬港通及深港通持股紀錄 
+The code is CCASS code, you can reference [HKEX website](http://www.hkex.com.hk/mutual-market/stock-connect/eligible-stocks/view-all-eligible-securities?sc_lang=en) to to get stock code.
+
+這是一個用Scrapy + Selenium 的爬蟲, 從港交所拿每天滬港通及深港通的持股紀錄
+Code是CCASS 編號 不是股份編號，可在[港交所綱站](http://www.hkex.com.hk/mutual-market/stock-connect/eligible-stocks/view-all-eligible-securities?sc_lang=zh-hk)找到對應
+
+
 
 ## Usage
 
