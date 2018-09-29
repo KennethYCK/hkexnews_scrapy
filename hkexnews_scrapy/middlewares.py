@@ -25,6 +25,7 @@ class SeleniumMiddleware(object):
             chrome_option = webdriver.ChromeOptions()
             chrome_option.add_argument('--headless')
             self.driver = webdriver.Chrome(chrome_options=chrome_option , executable_path=path)
+        self.driver.implicitly_wait(3)
         
         
     def process_request(self, request, spider):

@@ -15,7 +15,7 @@ class HkexnewsSpider(scrapy.Spider):
 
    
     def __init__(self, *args, **kwargs):
-        self.date = kwargs.get('date', datetime.date.strftime(datetime.date.today(), "%Y%m%d"))
+        self.date = kwargs.get('date', datetime.date.strftime(datetime.date.today() + datetime.timedelta(-1) , "%Y%m%d"))
 
     def parse(self, response):
         records = response.xpath('//tr[@class="row0"] | //tr[@class="row1"]')
