@@ -16,7 +16,7 @@ and then you can start use
 
 Due to limation from hkexnews, it only allow you download latest one year data. If you choose the day is not avaiable, the spider will handle as HTTP reponse 404. If the date is not trading day, also will reponse 404.
 
-當你下載完，請在`seetings.py` 更新`CHROMEDRIVER_PATH`. 之後就能用
+當你下載完，請在`setings.py` 更新`CHROMEDRIVER_PATH`. 之後就能用
 因為港交所只可給你拿回一年內的數據，如果超出那日期，Spider 會自動當404 處理. 如果那天沒有交易，也會當404 處理.
 
 ## Requirement 
