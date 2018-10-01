@@ -72,11 +72,15 @@ class SeleniumMiddleware(object):
         option = crawler.settings.get('CHROME_HEADLESS')
         s = cls(path, option)   
         crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)
+        crawler.signals.connect(s.spider_closed, signal=signals.spider_closed)
         return s 
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
 
+    def spider_closed(self, spider):
+		self.driver.quit()
+        spider.logger.info('Spider closed: %s' % spider.name)
 
     def process_exception(self, request, exception, spider):
         return HtmlResponse(url=self.driver.current_url, status=404)
