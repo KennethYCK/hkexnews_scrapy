@@ -29,6 +29,6 @@ class HkexnewsSpider(scrapy.Spider):
             item['stock_ename'] = result[1]
             item['share_holding'] = result[2].replace(',', '')
             item['percent'] = result[3]
-            item['date'] = self.date
+            item['date'] = self.date.strftime("%Y-%m-%d")
             
             yield item
