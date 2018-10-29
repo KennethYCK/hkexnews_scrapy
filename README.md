@@ -24,8 +24,6 @@ Due to limation from hkexnews, it only allow you download latest one year data. 
   * Fix the code after hkexnews change the layout
   * change the date format from yyyymmdd to yyyy-mm-dd. It is better to store in DB and query from Javascript
 
-## Database (Optional)
-
 
 ## Requirement 
 * Scrapy
