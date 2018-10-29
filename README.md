@@ -19,6 +19,14 @@ Due to limation from hkexnews, it only allow you download latest one year data. 
 當你下載完，請在`setings.py` 更新`CHROMEDRIVER_PATH`. 之後就能用
 因為港交所只可給你拿回一年內的數據，如果超出那日期，Spider 會自動當404 處理. 如果那天沒有交易，也會當404 處理.
 
+## Change Log
+* 2018-10-28
+  * Fix the code after hkexnews change the layout
+  * change the date format from yyyymmdd to yyyy-mm-dd. It is better to store in DB and query from Javascript
+
+## Database (Optional)
+
+
 ## Requirement 
 * Scrapy
 * Selenium
