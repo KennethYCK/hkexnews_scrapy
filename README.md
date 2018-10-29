@@ -12,7 +12,7 @@ After you download, please update the `CHROMEDRIVER_PATH` in the `settings.py`.
 and then you can start use
 * scrapy crawl hkexnews (Get Today data)
 * scrapy crawl hkexnews -o 123.json (will save the result to file 123.json in JSON format)
-* scrapy crawl hkexnews -a date=20180921 (Get the data from Date 21-Sep-2018, the format is YYYYmmdd)
+* scrapy crawl hkexnews -a date=2018-09-21 (Get the data from Date 21-Sep-2018, the format is YYYYmmdd)
 
 Due to limation from hkexnews, it only allow you download latest one year data. If you choose the day is not avaiable, the spider will handle as HTTP reponse 404. If the date is not trading day, also will reponse 404.
 
