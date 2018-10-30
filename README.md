@@ -24,14 +24,14 @@ Due to limation from hkexnews, it only allow you download latest one year data. 
   * Remove selenium, direct use formrequest to improve crawl performance
   * change the input date format from yyyy-mm-dd to yyyymmdd.But will use yyyy-mm-dd format in DB
 * 2018-10-28
-  * Fix the code after hkexnews change the layout
+  * Fix the code after hkexnews change the layout. 因為HKEX 在10月底改了板面
   * change the date format from yyyymmdd to yyyy-mm-dd. It is better to store in DB and query from Javascript
 
 
 ## Requirement 
 * Scrapy
-* Selenium
-* ChromeDriver
+* <del>Selenium </del>
+* <del>ChromeDriver</del> 
 
 ## Database (Optional)
 
