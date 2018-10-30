@@ -1,7 +1,7 @@
 This is a scrapy spider to get "Stock Connect Northbound/Southbound from HKEXNEWS [滬港通及深港通持股紀錄](http://www.hkexnews.hk/mutualmarketsdw/main.htm)  
 The code is CCASS code, you can reference [HKEX website](http://www.hkex.com.hk/mutual-market/stock-connect/eligible-stocks/view-all-eligible-securities?sc_lang=en) to to get stock code.
 
-這是一個用Scrapy + Selenium 的爬蟲, 從港交所拿每天滬港通及深港通的持股紀錄  
+這是一個用Scrapy <del>+ Selenium</del> 的爬蟲, 從港交所拿每天滬港通及深港通的持股紀錄  
 Code是CCASS 編號 不是股份編號，可在[港交所綱站](http://www.hkex.com.hk/mutual-market/stock-connect/eligible-stocks/view-all-eligible-securities?sc_lang=zh-hk)找到對應
 
 
@@ -12,7 +12,7 @@ After you download, please update the `CHROMEDRIVER_PATH` in the `settings.py`.
 and then you can start use
 * scrapy crawl hkexnews (Get Today data)
 * scrapy crawl hkexnews -o 123.json (will save the result to file 123.json in JSON format)
-* scrapy crawl hkexnews -a date=2018-09-21 (Get the data from Date 21-Sep-2018, the format is YYYYmmdd)
+* scrapy crawl hkexnews -a date=20180921 (Get the data from Date 21-Sep-2018, the format is YYYYmmdd)
 
 Due to limation from hkexnews, it only allow you download latest one year data. If you choose the day is not avaiable, the spider will handle as HTTP reponse 404. If the date is not trading day, also will reponse 404.
 
@@ -20,6 +20,9 @@ Due to limation from hkexnews, it only allow you download latest one year data. 
 因為港交所只可給你拿回一年內的數據，如果超出那日期，Spider 會自動當404 處理. 如果那天沒有交易，也會當404 處理.
 
 ## Change Log
+* 2018-10-29
+  * Remove selenium, direct use formrequest to improve crawl performance
+  * change the input date format from yyyy-mm-dd to yyyymmdd.But will use yyyy-mm-dd format in DB
 * 2018-10-28
   * Fix the code after hkexnews change the layout
   * change the date format from yyyymmdd to yyyy-mm-dd. It is better to store in DB and query from Javascript
@@ -44,8 +47,8 @@ In the settings.py
 * MONGODB_URI # Mongodb URI
 * MONGODB_DB  # Mongodb Name
 * MONGODB_COLLECTION # Mongodb collection Name
-* CHROMEDRIVER_PATH # Chromedriver path
-* CHROME_HEADLESS  # Chromedriver headless mode or not, default is headless mode
+* <del>CHROMEDRIVER_PATH # Chromedriver path</del>
+* <del>CHROME_HEADLESS  # Chromedriver headless mode or not, default is headless mode</del>
 
 ## Todo
 

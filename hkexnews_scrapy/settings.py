@@ -53,7 +53,7 @@ ROBOTSTXT_OBEY = False
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    'hkexnews_scrapy.middlewares.SeleniumMiddleware': 543,
+  
 }
 
 # Enable or disable extensions
@@ -95,7 +95,7 @@ LOG_STDOUT = True
 FEED_EXPORT_ENCODING = 'utf-8'
 
 
-MONGODB_URI = 'mongodb://username:password@ds046267.mlab.com:46267/dbname'
+MONGODB_URI = 'mongodb://username:password@xxxxx.mlab.com:port/dbname' #please refer your mongodb connection
 MONGODB_DB = 'database_name'
 MONGODB_COLLECTION = 'hkexnews'
 CHROMEDRIVER_PATH = '/home/user/chromedriver/chromedriver'
