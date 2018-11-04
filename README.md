@@ -4,7 +4,11 @@ The code is CCASS code, you can reference [HKEX website](http://www.hkex.com.hk/
 這是一個用Scrapy 的爬蟲, 從港交所拿每天滬港通及深港通的持股紀錄  
 Code是CCASS 編號 不是股份編號，可在[港交所綱站](http://www.hkex.com.hk/mutual-market/stock-connect/eligible-stocks/view-all-eligible-securities?sc_lang=zh-hk)找到對應
 
+##Demo 數據示範
 
+http://www.zoeystudios.com/echarts.html 
+
+You can enter 700 (e.g tencent stock code) 輸入700 (QQ 的股票號碼)
 
 ## Usage
 
